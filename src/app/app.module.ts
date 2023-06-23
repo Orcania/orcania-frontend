@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,11 +21,12 @@ import { PortfolioComponent } from './home/sections/portfolio/portfolio.componen
     AboutComponent,
     ContactComponent,
     MainTopComponent,
-    PortfolioComponent
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
