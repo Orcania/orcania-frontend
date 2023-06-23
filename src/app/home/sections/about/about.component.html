@@ -1,0 +1,68 @@
+<div class="mb-24">
+    <div class="text-center">
+        <p class="text-[#0C8CE9] font-semibold text-sm">WHO ARE WE?</p>
+        <p class="text-3xl font-bold">About Us</p>
+    </div>
+    <div class="flex md:flex-row flex-col justify-center items-center gap-7 md:mx-0 mx-8 mt-12">
+        <div class="box border-2 border-[#E7E7E7] rounded-lg px-7 py-5 md:w-[492px]">
+            <p class="title text-2xl font-bold">Leading Web3 Developement</p>
+            <p class="text-[#666363] text-[20px] mt-4">
+                Orcania is a leading Web3 development
+                company established in the vibrant city
+                of Dubai, United Arab Emirates.
+                We specialize in consulting and 
+                developing advanced Web3 projects, 
+                assisting clients in transforming their 
+                ideas into functional applications
+                complete with sound business models, 
+                utility, and tokenomics.
+            </p>
+        </div>
+        <div class="box border-2 border-[#E7E7E7] rounded-lg px-7 py-5 md:w-[492px]">
+            <p class="title text-2xl font-bold">Partners Not Services Providers</p>
+            <p class="text-[#666363] text-[20px] mt-4">
+                As partners, we treat every project as our own. 
+                Our mission is to provide  comprehensive Web3 development 
+                solutions that help projects succeed in the rapidly evolving 
+                world of blockchain technology. We work closely with you to 
+                understand your unique needs and goals, and deliver top-quality
+                services that exceed your own expectations.
+            </p>
+        </div>
+    </div>
+    <div class="text-center mt-28">
+        <p class="text-[#0C8CE9] font-semibold text-sm">WHAT DO WE OFFER?</p>
+        <p class="text-3xl font-bold">Our Services</p>
+    </div>
+    <div class="mt-16 bg-image xl:block hidden">
+        <div class="grid grid-cols-3 flex mx-52 pb-24">
+            <div class="flex flex-col items-center mt-16" *ngFor="let item of items">
+                <div class="services-image flex justify-center">
+                    <img width="25px" [src]="item.image" />
+                </div>
+                <p class="text-white font-bold text-xl mt-3">{{item.title}}</p>
+                <p class="text-[#B5DAF6] mt-3">{{item.text1}}</p>
+                <p class="text-[#B5DAF6]">{{item.text2}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Version -->
+
+    <div class="mt-16 bg-image xl:hidden hidden">
+        <div class="grid grid-cols-3 flex gap-7 pb-24">
+            <div class="flex flex-col items-center mt-16" *ngFor="let item of items">
+                <div class="services-image flex justify-center">
+                    <img width="25px" [src]="item.image" />
+                </div>
+                <p class="text-white font-bold text-xl mt-3">{{item.title}}</p>
+                <p class="text-[#B5DAF6] mt-3">{{item.text1}}</p>
+                <p class="text-[#B5DAF6]">{{item.text2}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+
+</div>
+

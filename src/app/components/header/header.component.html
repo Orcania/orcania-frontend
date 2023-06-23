@@ -1,0 +1,23 @@
+<nav class="sticky top-0 bg-white lg:py-3 h-[70px] z-50">
+    <div class="flex mx-8 justify-between items-center">
+        <button 
+            class="block lg:hidden"
+            (click)="toggleMenu()">
+                <img width="30px" class="translate-y-[8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '' : ''"/>
+                <img width="30px" class="translate-y-[-8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '' : ''" />
+                <img width="30px" class="translate-y-[-25px]" src="/assets/Vector.svg" />
+        </button>
+        <div class="gap-8 flex lg:flex-row flex-col items-center header-menu lg:mt-2" [ngClass]=" open === true ? 'active' : '' ">
+            <a class="header-link cursor-pointer">Home</a>
+            <a class="header-link cursor-pointer">About us</a>
+            <a class="header-link cursor-pointer">Portfolio</a>
+            <a class="header-link cursor-pointer">Contact Us</a>
+        </div>
+        <div class="montserrat text-[20px] font-semibold lg:mr-56 ml-24">
+            ORCANIA    
+        </div>
+        <button class="text-white bg-[#0C8CE9] py-2 px-6 rounded md:visible invisible">
+            Book a Call
+        </button>
+    </div>
+</nav>

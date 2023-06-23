@@ -1,0 +1,22 @@
+@media screen and (min-width:768px){
+    .blur-effect::after{
+        content: "";
+        position: absolute;
+        top: 75%;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(360deg, #FFFFFF 17.25%, rgba(255, 255, 255, 0) 128.87%);
+    }
+}
+
+.bg-matrix{
+    background-image: url('/assets/matrix.png');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+
+.translate{
+    transform: translate(6rem , -5rem);
+    backdrop-filter: shadow(60%);
+}
