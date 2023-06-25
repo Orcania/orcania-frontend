@@ -9,11 +9,26 @@
                     <br />
                     completed projects
                 </p>
-                <p class="md:mt-6 translate-y-[-35px] md:translate-y-[0px]">1/6</p>
+                <div class="md:translate-y-[-35px]">
+                    <div class="buttons flex gap-10 md:block hidden ml-24">
+                        <button class="button py-4 px-5 rounded-md hover:bg-[#F7F9FB]" (click)="moveLeft()">
+                            <span class="icon">
+                                <img src="/assets/arrow-left.svg" />
+                            </span>
+                        </button>
+            
+                        <button class="button py-4 px-5 rounded-md hover:bg-[#F7F9FB]" (click)="moveRight()">
+                            <span class="icon">
+                                <img src="/assets/arrow-right.svg" />
+                            </span>
+                        </button>
+                    </div>
+                    <p class="md:mt-6 translate-y-[-35px] md:translate-y-[0px]"><span></span>{{i}}/6</p>
+                </div>
             </div>
         </div>
     </div>
-    <drag-scroll class="projects md:ml-80 md:translate-y-[-90px] md:h-[400px] h-[500px] md:mt-0">
+    <drag-scroll [scrollbar-hidden]="isScrollbarHidden" [drag-scroll-y-disabled]="true" class="projects md:ml-80 md:translate-y-[-90px] md:h-[400px] h-[500px] md:mt-0" #navv>
         <div class="px-12" drag-scroll-item>
             <div class="border-2 border-transparent rounded-md bg-ape text-white md:p-12 pl-12 py-10 md:w-[940px]">
                 <div class="flex gap-3">
