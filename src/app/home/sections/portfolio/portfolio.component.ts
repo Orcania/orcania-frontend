@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild } from '@angular/core';
+import { DragScrollComponent } from 'ngx-drag-scroll';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
 
+  @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
+
+    moveLeft() {
+        this.ds.moveLeft();
+    }
+
+    moveRight() {
+        this.ds.moveRight();
+    }
+    
 }

@@ -34,8 +34,8 @@
         <p class="text-[#0C8CE9] font-semibold text-sm">WHAT DO WE OFFER?</p>
         <p class="text-3xl font-bold">Our Services</p>
     </div>
-    <div class="mt-16 bg-image xl:block hidden">
-        <div class="grid grid-cols-3 flex mx-52 pb-24">
+    <div class="mt-16 bg-image xl:block hidden xl:h-auto h-[300px]">
+        <div class="grid grid-cols-3 flex mx-48 pb-24">
             <div class="flex flex-col items-center mt-16" *ngFor="let item of items">
                 <div class="services-image flex justify-center">
                     <img width="25px" [src]="item.image" />
@@ -48,20 +48,29 @@
     </div>
 
     <!-- Mobile Version -->
-
-    <div class="mt-16 bg-image xl:hidden block h-[300px]">
-            <drag-scroll>
-                <div class="h-[300px] my-20 flex items-center justify-center" *ngFor="let item of items" drag-scroll-item >
-                    <div class="services-image flex justify-center">
-                        <img width="25px" [src]="item.image" />
-                    </div>
-                    <p class="text-white font-bold text-xl mt-3">{{item.title}}</p>
-                    <p class="text-[#B5DAF6] mt-3">{{item.text1}}</p>
-                    <p class="text-[#B5DAF6]">{{item.text2}}</p>
+    <div class="xl:hidden">
+        <drag-scroll [scrollbar-hidden]="false" [drag-scroll-y-disabled]="true" class="mt-16 h-[300px] bg-image">
+            <div class="py-20 lg:pr-20 md:px-24 sm:px-56 px-32" *ngFor="let item of items; let i from index" drag-scroll-item >
+                <div class="services-image flex justify-center ml-16">
+                    <img width="25px" [src]="item.image" />
                 </div>
-            </drag-scroll>
+                <p class="text-white font-bold text-xl mt-3">{{item.title}}</p>
+                <p class="text-[#B5DAF6] mt-2">{{item.text1}}</p>
+                <p class="text-[#B5DAF6]">{{item.text2}}</p>
+            </div>
+        </drag-scroll>
+        <div class="flex translate-y-[-100px] text-white justify-center text-[60px] gap-2 mr-14 hidden">
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+            <button>.</button>
+        </div>
     </div>
-
     <!---->
 
 </div>

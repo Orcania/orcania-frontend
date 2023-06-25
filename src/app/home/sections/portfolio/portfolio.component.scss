@@ -1,3 +1,9 @@
+.line::before{
+    content: url('/assets/line2.svg');
+    position: absolute;
+    transform: translate(-15px , 5px)
+}
+
 .bg-rectangle1{
     background-image: url('/assets/bg-images/rectangle.png');
     background-size: 1200px 300px;
@@ -13,7 +19,7 @@
 
 .bg-rectangle2{
     background-image: url('/assets/bg-images/rectangle2.png');
-    background-size: 1000px 300px;
+    background-size: 1000px 230px;
     background-repeat: no-repeat;
     background-position: right;
 }
