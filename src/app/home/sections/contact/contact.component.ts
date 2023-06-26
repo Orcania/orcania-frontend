@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild , ElementRef } from '@angular/core';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  private scrollContainer: any;
 
+  constructor (private scrollService: ScrollService) { }
+
+  @ViewChild('frameContact', {static: false}) frameContact: ElementRef | undefined;
+
+  ngAfterViewInit() {
+    if (this.frameContact)
+    this.scrollContainer = this.frameContact.nativeElement;
+    this.scrollService.scrollHeightContact = this.scrollContainer.scrollHeight
+  }
 }

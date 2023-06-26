@@ -1,5 +1,6 @@
-import { Component , ViewChild , HostBinding , HostListener, OnInit  } from '@angular/core';
+import { Component , ViewChild , ElementRef  , HostListener  } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,11 +8,23 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  isScrollbarHidden: boolean = true;
 
+  constructor(private scrollService : ScrollService ) {}
+
+  isScrollbarHidden: boolean = true;
+  private scrollContainer: any;
   i : number = 1
 
   @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
+
+  @ViewChild('framePortfolio', {static: false}) framePortfolio: ElementRef | undefined;
+
+
+  ngAfterViewInit() {
+    if (this.framePortfolio)
+    this.scrollContainer = this.framePortfolio.nativeElement;
+    this.scrollService.scrollHeightPortfolio = this.scrollContainer.scrollHeight
+  }
 
     moveLeft() {
         this.ds.moveLeft();

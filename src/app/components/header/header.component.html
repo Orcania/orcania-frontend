@@ -8,10 +8,18 @@
                 <img width="30px" class="translate-y-[-25px]" src="/assets/Vector.svg" />
         </button>
         <div class="gap-8 flex lg:flex-row flex-col header-menu lg:mt-2" [ngClass]=" open === true ? 'active' : '' ">
-            <a class="header-link cursor-pointer" (click)="scrollTo('home')">Home</a>
-            <a class="header-link cursor-pointer" (click)="scrollTo('about')">About us</a>
-            <a class="header-link cursor-pointer" (click)="scrollTo('portfolio')">Portfolio</a>
-            <a class="header-link cursor-pointer" (click)="scrollTo('contact')">Contact Us</a>
+            <a class="header-link cursor-pointer" (click)="scrollTo('home')" [ngClass]=" link === 'home' ? 'is-active' : '' ">
+                Home
+            </a>
+            <a class="header-link cursor-pointer" (click)="scrollTo('about')" [ngClass]=" link === 'about' ? 'is-active' : '' ">
+                About us
+            </a>
+            <a class="header-link cursor-pointer" (click)="scrollTo('portfolio')" [ngClass]=" link === 'portfolio' ? 'is-active' : '' ">
+                Portfolio
+            </a>
+            <a class="header-link cursor-pointer" (click)="scrollTo('contact')" [ngClass]=" link === 'contact' ? 'is-active' : '' ">
+                Contact Us
+            </a>
             <div class="bg-[#0C8CE9] mt-64 md:hidden cursor-pointer mx-12 rounded text-lg">
                 <button class="text-white py-3">
                     Book a call

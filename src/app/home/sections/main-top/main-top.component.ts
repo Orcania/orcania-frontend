@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild , ElementRef } from '@angular/core';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-main-top',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-top.component.scss']
 })
 export class MainTopComponent {
+  private scrollContainer: any;
 
+  constructor(private scrollService : ScrollService){ }
+
+  @ViewChild('frameHome', {static: false}) frameHome: ElementRef | undefined;
+
+
+  ngAfterViewInit() {
+    if (this.frameHome)
+    this.scrollContainer = this.frameHome.nativeElement;
+    this.scrollService.scrollHeightHome = this.scrollContainer.scrollHeight
+    console.log(this.scrollContainer.scrollHeight)
+  }
 }
