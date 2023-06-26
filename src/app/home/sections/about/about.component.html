@@ -48,10 +48,11 @@
     </div>
 
     <!-- Mobile Version -->
+
     <div class="xl:hidden">
-        <drag-scroll [scrollbar-hidden]="false" [drag-scroll-y-disabled]="true" class="mt-16 h-[300px] bg-image">
-            <div class="py-20 lg:pr-20 md:px-24 sm:px-56 px-32" *ngFor="let item of items; let i from index" drag-scroll-item >
-                <div class="services-image flex justify-center ml-16">
+        <drag-scroll [scrollbar-hidden]="true" [drag-scroll-y-disabled]="true" class="mt-16 bg-image h-[300px]" #navv>
+            <div class="py-20 text-center items-center w-[500px]" *ngFor="let item of items; let i from index" drag-scroll-item >
+                <div class="services-image flex justify-center ml-56">
                     <img width="25px" [src]="item.image" />
                 </div>
                 <p class="text-white font-bold text-xl mt-3">{{item.title}}</p>
@@ -59,18 +60,19 @@
                 <p class="text-[#B5DAF6]">{{item.text2}}</p>
             </div>
         </drag-scroll>
-        <div class="flex translate-y-[-100px] text-white justify-center text-[60px] gap-2 mr-14 hidden">
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
-            <button>.</button>
+        <div class="flex translate-y-[-100px] text-white justify-center text-[60px] gap-3.5">
+            <button (click)="moveTo(0)">.</button>
+            <button (click)="moveTo(1)">.</button>
+            <button (click)="moveTo(2)">.</button>
+            <button (click)="moveTo(3)">.</button>
+            <button (click)="moveTo(4)">.</button>
+            <button (click)="moveTo(5)">.</button>
+            <button (click)="moveTo(6)">.</button>
+            <button (click)="moveTo(7)">.</button>
+            <button (click)="moveTo(8)">.</button>
         </div>
     </div>
+
     <!---->
 
 </div>

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild , OnInit } from '@angular/core';
 import { services , Iservices } from 'src/constants/services';
-import { DragScrollComponent } from 'ngx-drag-scroll/public-api';
+import { DragScrollComponent } from 'ngx-drag-scroll';
 
 @Component({
   selector: 'app-about',
@@ -9,4 +9,9 @@ import { DragScrollComponent } from 'ngx-drag-scroll/public-api';
 })
 export class AboutComponent {
   items : services[] = Iservices;
+
+  @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
+  moveTo(index : number){
+    this.ds.moveTo(index)
+  }
 }

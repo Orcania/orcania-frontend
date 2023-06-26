@@ -7,11 +7,14 @@
                 <img width="30px" class="translate-y-[-8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '' : ''" />
                 <img width="30px" class="translate-y-[-25px]" src="/assets/Vector.svg" />
         </button>
-        <div class="gap-8 flex lg:flex-row flex-col items-center header-menu lg:mt-2" [ngClass]=" open === true ? 'active' : '' ">
+        <div class="gap-8 flex lg:flex-row flex-col header-menu lg:mt-2" [ngClass]=" open === true ? 'active' : '' ">
             <a class="header-link cursor-pointer">Home</a>
             <a class="header-link cursor-pointer">About us</a>
             <a class="header-link cursor-pointer">Portfolio</a>
             <a class="header-link cursor-pointer">Contact Us</a>
+            <div class="bg-[#0C8CE9] mt-72 md:hidden cursor-pointer mx-12 rounded text-lg">
+            <button class="text-white py-3">Book a call</button>
+            </div>
         </div>
         <div class="montserrat text-[20px] font-semibold lg:mr-56 ml-24">
             ORCANIA    
