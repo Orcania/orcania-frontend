@@ -7,10 +7,10 @@ import { PortfolioComponent } from './home/sections/portfolio/portfolio.componen
 import { MainTopComponent } from './home/sections/main-top/main-top.component';
 
 const routes: Routes = [
-  { path: 'home', component: MainTopComponent },
+ /* { path: 'home', component: MainTopComponent },
   { path: 'about', component: AboutComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },*/
 ];
 
 @NgModule({
