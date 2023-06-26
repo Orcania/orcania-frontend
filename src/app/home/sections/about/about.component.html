@@ -1,9 +1,9 @@
-<div class="mb-24">
+<div class="xl:mb-24">
     <div class="text-center">
         <p class="text-[#0C8CE9] font-semibold text-sm">WHO ARE WE?</p>
         <p class="text-3xl font-bold">About Us</p>
     </div>
-    <div class="flex md:flex-row flex-col justify-center gap-7 md:mx-0 mx-8 mt-12">
+    <div class="flex md:flex-row flex-col justify-center gap-7 md:mx-0 mx-6 mt-12">
         <div class="box border-2 border-[#E7E7E7] rounded-lg px-7 py-5 md:w-[492px]">
             <p class="title text-2xl font-bold">Leading Web3 Developement</p>
             <p class="text-[#666363] text-[20px] mt-4">
@@ -30,7 +30,7 @@
             </p>
         </div>
     </div>
-    <div class="text-center mt-28">
+    <div class="text-center md:mt-28 mt-24">
         <p class="text-[#0C8CE9] font-semibold text-sm">WHAT DO WE OFFER?</p>
         <p class="text-3xl font-bold">Our Services</p>
     </div>
@@ -50,9 +50,9 @@
     <!-- Mobile Version -->
 
     <div class="xl:hidden">
-        <drag-scroll [scrollbar-hidden]="true" [drag-scroll-y-disabled]="true" class="mt-16 bg-image h-[300px]" #navv>
-            <div class="py-20 text-center items-center w-[500px]" *ngFor="let item of items; let i from index" drag-scroll-item >
-                <div class="services-image flex justify-center ml-56">
+        <drag-scroll [scrollbar-hidden]="true" [drag-scroll-y-disabled]="true" class="mt-8 bg-image h-[300px]" #navv>
+            <div class="py-20 text-center items-center md:w-1/2 w-full" *ngFor="let item of items; let i from index" drag-scroll-item >
+                <div class="services-image flex justify-center mx-auto">
                     <img width="25px" [src]="item.image" />
                 </div>
                 <p class="text-white font-bold text-xl mt-3">{{item.title}}</p>
@@ -60,7 +60,7 @@
                 <p class="text-[#B5DAF6]">{{item.text2}}</p>
             </div>
         </drag-scroll>
-        <div class="flex translate-y-[-100px] text-white justify-center text-[60px] gap-3.5">
+        <div class="flex translate-y-[-100px] justify-center text-white text-[60px] gap-3.5">
             <button (click)="moveTo(0)" (ontouchend)="moveTo(0)">.</button>
             <button (click)="moveTo(1)" (ontouchend)="moveTo(1)">.</button>
             <button (click)="moveTo(2)" (ontouchend)="moveTo(2)">.</button>

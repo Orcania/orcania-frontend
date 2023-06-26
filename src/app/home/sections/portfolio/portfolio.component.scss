@@ -4,11 +4,22 @@
     transform: translate(-15px , 5px)
 }
 
-.bg-rectangle1{
-    background-image: url('/assets/bg-images/rectangle.png');
-    background-size: 1200px 300px;
-    background-repeat: no-repeat;
-    background-position: 0px -20px;
+@media screen and (min-width: 768px) {
+    .bg-rectangle1{
+        background-image: url('/assets/bg-images/rectangle.png');
+        background-size: 1200px 300px;
+        background-repeat: no-repeat;
+        background-position: 0px -20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bg-rectangle1{
+        background-image: url('/assets/bg-images/rectangle.png');
+        background-size: 1200px 400px;
+        background-repeat: no-repeat;
+        background-position: 0px -20px;
+    }
 }
 
 .bg-ape{
