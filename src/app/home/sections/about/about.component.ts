@@ -1,4 +1,4 @@
-import { Component , ViewChild , ElementRef } from '@angular/core';
+import { Component , ViewChild , ElementRef , HostListener } from '@angular/core';
 import { services , Iservices } from 'src/constants/services';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { ScrollService } from 'src/app/services/scroll.service';

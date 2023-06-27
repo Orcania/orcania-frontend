@@ -1,4 +1,4 @@
-import { Component , ViewChild , ElementRef } from '@angular/core';
+import { Component , ViewChild , ElementRef , HostListener} from '@angular/core';
 import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({

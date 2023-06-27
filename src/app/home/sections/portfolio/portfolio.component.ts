@@ -16,9 +16,7 @@ export class PortfolioComponent {
   i : number = 1
 
   @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
-
   @ViewChild('framePortfolio', {static: false}) framePortfolio: ElementRef | undefined;
-
 
   ngAfterViewInit() {
     if (this.framePortfolio)
@@ -40,7 +38,6 @@ export class PortfolioComponent {
         }
     }
 
-    @HostListener('window:resize')
       ngOnInit() {
         const windowWidth = window.innerWidth;
         if (windowWidth >= 768) {
