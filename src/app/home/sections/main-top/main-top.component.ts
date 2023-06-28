@@ -13,6 +13,7 @@ export class MainTopComponent {
 
   @ViewChild('frameHome', {static: false}) frameHome: ElementRef | undefined;
 
+  @HostListener('window:resize')
   ngAfterViewInit() {
     if (this.frameHome)
     this.scrollContainer = this.frameHome.nativeElement;

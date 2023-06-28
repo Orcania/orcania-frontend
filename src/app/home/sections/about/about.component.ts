@@ -17,10 +17,12 @@ export class AboutComponent {
   @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
   @ViewChild('frameAbout', {static: false}) frameAbout: ElementRef | undefined;
 
+  @HostListener('window:resize')
   ngAfterViewInit() {
     if (this.frameAbout)
     this.scrollContainer = this.frameAbout.nativeElement;
     this.scrollService.scrollHeightAbout = this.scrollContainer.scrollHeight
+    console.log('working')
   }
 
   moveTo(index : number){

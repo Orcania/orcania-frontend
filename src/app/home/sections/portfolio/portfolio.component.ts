@@ -18,6 +18,7 @@ export class PortfolioComponent {
   @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
   @ViewChild('framePortfolio', {static: false}) framePortfolio: ElementRef | undefined;
 
+  @HostListener('window:resize')
   ngAfterViewInit() {
     if (this.framePortfolio)
     this.scrollContainer = this.framePortfolio.nativeElement;
