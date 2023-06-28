@@ -3,9 +3,9 @@
         <button 
             class="block lg:hidden"
             (click)="toggleMenu()">
-                <img width="30px" class="translate-y-[8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '' : ''"/>
-                <img width="30px" class="translate-y-[-8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '' : ''" />
-                <img width="30px" class="translate-y-[-25px]" src="/assets/Vector.svg" />
+                <img width="30px" class="translate-y-[8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? 'invisible transition-all ease-in-out delay-80' : 'transition-all ease-in-out delay-200'"/>
+                <img width="30px" class="translate-y-[-8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? 'rotate-45 translate-x-[10px] transition-all ease-in-out delay-150' : 'transition-all ease-in-out delay-150'" />
+                <img width="30px" class="translate-y-[-25px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '-rotate-45 translate-y-[-31.5px] translate-x-[-4.5px] transition-all ease-in-out delay-150' : 'transition-all ease-in-out delay-150'"/>
         </button>
         <div class="gap-8 flex lg:flex-row flex-col header-menu md:mt-2 font-medium" [ngClass]=" open === true ? 'active' : '' ">
             <a class="header-link cursor-pointer" (click)="scrollTo('home')" [ngClass]=" link === 'home' ? 'is-active' : '' ">
