@@ -1,5 +1,5 @@
 <div class="overflow-hidden" #framePortfolio>
-    <div class="bg-rectangle1 xl:pl-80 xl:pt-10 md:pb-0 pt-20 md:h-[300px] h-[400px]">
+    <div class="bg-rectangle1 2xl:pl-96 xl:pl-80 xl:pt-10 md:pb-0 pt-20 md:h-[300px] h-[400px]">
         <div class="relative line ml-12">
             <p class="text-[#0C8CE9] font-bold text-sm mr-9">OUR WORK?</p>
             <p class="text-3xl font-bold">Portfolio</p>
@@ -10,7 +10,7 @@
                         completed projects
                     </p>
                 <div class="md:translate-y-[-35px]">
-                    <div class="buttons flex gap-10 md:block hidden ml-24">
+                    <div class="buttons flex md:block hidden lg:ml-52">
                         <button class="button py-4 px-5 rounded-md hover:bg-[#F7F9FB]" (click)="moveLeft()">
                             <span class="icon">
                                 <img src="/assets/arrow-left.svg" />
@@ -27,10 +27,10 @@
             </div>
         </div>
     </div>
-    <drag-scroll class="projects xl:ml-80 md:translate-y-[-90px] translate-y-[-190px] sm:mx-4 mx-7" [drag-scroll-y-disabled]="true" #navv>
-            <div class="border-2 border-transparent rounded-md bg-ape text-white md:p-12 pl-10 py-10 lg:w-[940px] w-full mr-14" drag-scroll-item>
+    <drag-scroll class="projects 2xl:ml-96 xl:pl-10 xl:ml-80 xl:translate-y-[-110px] md:translate-y-[-90px] translate-y-[-190px] sm:mx-4 mx-7" [drag-scroll-y-disabled]="true" #navv>
+            <div class="border-2 border-transparent rounded-2xl bg-ape text-white md:p-12 pl-10 py-10 lg:w-[940px] w-full mr-14" drag-scroll-item>
                 <div class="flex gap-3">
-                    <img src="/assets/ape-logo.svg" />
+                    <img class="md:mb-0 mb-7" src="/assets/ape-logo.svg" />
                     <div class="font-bold text-3xl">
                         <p class="title md:block hidden">The Red Ape Family</p>
                         <p class="title md:hidden">
@@ -63,14 +63,14 @@
                     <br />
                     episodes are sold as individual NFTs.
                 </p>
-                <button class="flex gap-3 text-white bg-[#0C8CE9] py-3 px-5 rounded-3xl sm:mt-20 mt-8 ripple">
-                    <img src="/assets/app-window.svg" />
+                <button class="flex justify-center items-center gap-3 text-white bg-[#0C8CE9] w-[190px] h-[50px] rounded-3xl sm:mt-20 mt-8 ripple">
+                    <img  src="/assets/app-window.svg" />
                     <p class="font-semibold">Visit Website</p>
                 </button>
             </div>
             <div class="border-2 border-transparent rounded-md text-white bg-ape md:p-12 pl-10 py-10 lg:w-[940px] w-full mr-14" drag-scroll-item>
                 <div class="flex gap-3">
-                    <img src="/assets/ape-logo.svg" />
+                    <img class="md:mb-0 mb-7" src="/assets/ape-logo.svg" />
                     <div class="font-bold text-3xl">
                         <p class="title md:block hidden">The Red Ape Family</p>
                         <p class="title md:hidden">
@@ -103,7 +103,7 @@
                     <br />
                     episodes are sold as individual NFTs.
                 </p>
-                <button class="flex gap-3 text-white bg-[#0C8CE9] py-3 px-5 rounded-3xl sm:mt-20 mt-8 ripple">
+                <button class="flex justify-center items-center gap-3 text-white bg-[#0C8CE9] w-[190px] h-[50px] rounded-3xl sm:mt-20 mt-8 ripple">
                     <img src="/assets/app-window.svg" />
                     <p class="font-semibold">Visit Website</p>
                 </button>

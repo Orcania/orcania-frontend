@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,26 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
+  constructor(private scrollService: ScrollService) { }
+
   scrollTo(elementId: string): void {
     if (elementId === 'home'){
-      scroll({ top: 0,
-        left: 0,
-        behavior: 'smooth'});
+      this.scrollService.scrollHome()
     }
+
     if (elementId === 'about'){
-      scroll({ top: 1230,
-        left: 0,
-        behavior: 'smooth'});
+      this.scrollService.scrollAbout()
     }
+
     if (elementId === 'portfolio'){
-      scroll({ top: 2650,
-        left: 0,
-        behavior: 'smooth'});
+      this.scrollService.scrollPortfolio()
     }
+    
     if (elementId === 'contact'){
-      scroll({ top: 3400,
-        left: 0,
-        behavior: 'smooth'});
+      this.scrollService.scrollContact()
     }
   }
 }
