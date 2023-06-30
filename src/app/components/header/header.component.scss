@@ -63,3 +63,40 @@
 }
 }
 
+@media screen and (max-width: 410px) {
+    .translate-first{
+        @apply translate-y-[7px];
+    }
+
+    .translate-second{
+        @apply translate-y-[-6px];
+    }
+
+    .translate-third{
+        @apply translate-y-[-19px];
+
+        &.is-open{
+            @apply translate-y-[-25px];
+            @apply translate-x-[-2px]
+        }
+    }
+}
+
+@media screen and (min-width: 410px) {
+    .translate-first{
+        @apply translate-y-[8px];
+    }
+
+    .translate-second{
+        @apply translate-y-[-8px];
+    }
+
+    .translate-third{
+        @apply translate-y-[-25px];
+
+        &.is-open{
+           @apply translate-y-[-31.5px];
+           @apply translate-x-[-4.5px];
+        }
+    }
+}

@@ -5,16 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+::-webkit-scrollbar{
+    display: none !important;
+}
+
 html{
     font-family: 'Ubuntu', sans-serif;
 }
 
 .montserrat{
     font-family: 'Montserrat', sans-serif;
-}
-
-::-webkit-scrollbar{
-    display: none !important;
 }
 
 .socials{
@@ -68,4 +68,8 @@ html{
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+
+.line-normal{
+    line-height: normal !important;
 }

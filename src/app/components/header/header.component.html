@@ -3,11 +3,11 @@
         <button 
             class="block lg:hidden"
             (click)="toggleMenu()">
-                <img width="30px" class="translate-y-[8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? 'invisible transition-all ease-in-out delay-80' : 'transition-all ease-in-out delay-200'"/>
-                <img width="30px" class="translate-y-[-8px]" src="/assets/Vector.svg" [ngClass]=" open === true ? 'rotate-45 translate-x-[10px] transition-all ease-in-out delay-150' : 'transition-all ease-in-out delay-150'" />
-                <img width="30px" class="translate-y-[-25px]" src="/assets/Vector.svg" [ngClass]=" open === true ? '-rotate-45 translate-y-[-31.5px] translate-x-[-4.5px] transition-all ease-in-out delay-150' : 'transition-all ease-in-out delay-150'"/>
+                <img width="30px" class="translate-first" src="/assets/Vector.svg" [ngClass]=" open === true ? 'invisible transition-all ease-in-out delay-80' : 'transition-all ease-in-out delay-200'"/>
+                <img width="30px" class="translate-second" src="/assets/Vector.svg" [ngClass]=" open === true ? 'rotate-45 translate-x-[10.4px] translate-y-[-7.8px] transition-all ease-in-out delay-150' : 'transition-all ease-in-out delay-150'" />
+                <img width="30px" class="translate-third" src="/assets/Vector.svg" [ngClass]=" open === true ? '-rotate-45 is-open transition-all ease-in-out delay-150' : 'transition-all ease-in-out delay-150'"/>
         </button>
-        <div class="gap-10 flex lg:flex-row flex-col header-menu lg:mt-1 font-medium  translate-x-[-10px]" [ngClass]=" open === true ? 'active' : '' ">
+        <div class="flex gap-10 font-medium text-[#131822] lg:flex-row flex-col header-menu lg:mt-1 lg:translate-x-[-10px]" [ngClass]=" open === true ? 'active' : '' ">
             <a class="header-link cursor-pointer" (click)="scrollTo('home')" [ngClass]=" link === 'home' ? 'is-active' : '' ">
                 Home
             </a>
