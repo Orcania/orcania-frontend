@@ -60,16 +60,16 @@
                 <p class="text-[#B5DAF6]">{{item.text2}}</p>
             </div>
         </drag-scroll>
-        <div class="flex translate-y-[-100px] justify-center text-white text-[60px] gap-3.5">
-            <button (click)="moveTo(0)" (ontouchend)="moveTo(0)">.</button>
-            <button (click)="moveTo(1)" (ontouchend)="moveTo(1)">.</button>
-            <button (click)="moveTo(2)" (ontouchend)="moveTo(2)">.</button>
-            <button (click)="moveTo(3)" (ontouchend)="moveTo(3)">.</button>
-            <button (click)="moveTo(4)" (ontouchend)="moveTo(4)">.</button>
-            <button (click)="moveTo(5)" (ontouchend)="moveTo(5)">.</button>
-            <button (click)="moveTo(6)" (ontouchend)="moveTo(6)">.</button>
-            <button (click)="moveTo(7)" (ontouchend)="moveTo(7)">.</button>
-            <button (click)="moveTo(8)" (ontouchend)="moveTo(8)">.</button>
+        <div class="flex translate-y-[-40px] justify-center text-white text-[60px] gap-3.5">
+            <button 
+                (click)="moveTo(point.id)"
+                (ontouchend)="moveTo(point.id)"
+                *ngFor="let point of points" 
+                class="flex justify-center items-center rounded-3xl w-[11px] h-[11px]"
+                [ngClass]="selected === point.id ? 'border-3 border-[#0C8CE9]' : '' "
+            >
+                <img width="9px" height="9px" [src]="point.img" />
+            </button>
         </div>
     </div>
 

@@ -17,12 +17,25 @@ export class PortfolioComponent {
 
   @ViewChild('navv', { read: DragScrollComponent }) ds!: DragScrollComponent;
   @ViewChild('framePortfolio', {static: false}) framePortfolio: ElementRef | undefined;
+  @ViewChild('portfolioContainer') containerRef !: ElementRef;
 
   @HostListener('window:resize')
   ngAfterViewInit() {
     if (this.framePortfolio)
     this.scrollContainer = this.framePortfolio.nativeElement;
     this.scrollService.scrollHeightPortfolio = this.scrollContainer.scrollHeight
+
+    /* const panelWidth = this.containerRef.nativeElement.offsetWidth;
+    console.log(panelWidth)
+    const scrollLeft = this.containerRef.nativeElement.scrollLeft;
+    console.log(scrollLeft)
+    const panelNumber = Math.round(scrollLeft / panelWidth);
+
+    // Update the currentPanel variable
+    this.i = panelNumber;
+
+    // Update the navigation status */
+    
   }
 
     moveLeft() {
@@ -39,14 +52,14 @@ export class PortfolioComponent {
         }
     }
 
-      ngOnInit() {
+      /*ngOnInit() {
         const windowWidth = window.innerWidth;
         if (windowWidth >= 768) {
           this.isScrollbarHidden = true
         }
         else if (windowWidth < 768){
           this.isScrollbarHidden = false;
-        }
-      }
+        }*/
+      
     
 }

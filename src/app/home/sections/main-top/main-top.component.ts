@@ -18,6 +18,5 @@ export class MainTopComponent {
     if (this.frameHome)
     this.scrollContainer = this.frameHome.nativeElement;
     this.scrollService.scrollHeightHome = this.scrollContainer.scrollHeight
-    console.log('home height' , this.scrollContainer.scrollHeight)
   }
 }

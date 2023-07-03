@@ -26,7 +26,9 @@
     }   
 }
 
-.translate{
-    transform: translate(6rem , -5rem);
-    backdrop-filter: shadow(60%);
+@media screen and (min-width: 1280px) {
+    .translate{
+        transform: translate(5rem , -4rem);
+        backdrop-filter: shadow(60%);
+    }
 }
