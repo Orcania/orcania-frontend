@@ -59,9 +59,7 @@
           </p>
         </div>
       </div>
-      <p class="max-w-[200px] mt-4 md:block hidden bg-[red]">
-        {{ project.description }}
-      </p>
+      <div [innerHTML]="project.description()"></div>
       <p class="max-w-xl mt-4 md:hidden pr-24">
         {{ project.description }}
       </p>
