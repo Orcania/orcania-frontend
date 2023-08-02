@@ -9,35 +9,6 @@ import { ScrollService } from 'src/app/services/scroll.service';
 })
 export class PortfolioComponent {
 
-
-  projects = [
-    {
-      title: 'The Red Ape Family',
-      subtitle: 'Company Name',
-      description: 'The Red Ape Family (TRAF) is a ground-breaking new comedy, and the first animated series built around, and starring, famous NFTs. It is also the first show of its kind where episodes are sold as individual NFTs.',
-      imgSrc: '/assets/ape-logo.svg',
-      websiteUrl: 'https://example.com'
-    },
-    {
-      title: 'The Red Ape Family',
-      subtitle: 'Company Name',
-      description: 'The Red Ape Family (TRAF) is a ground-breaking new comedy, and the first animated series built around, and starring, famous NFTs. It is also the first show of its kind where episodes are sold as individual NFTs.',
-      imgSrc: '/assets/ape-logo.svg',
-      websiteUrl: 'https://example.com'
-    },
-    {
-      title: 'The Red Ape Family',
-      subtitle: 'Company Name',
-      description: 'The Red Ape Family (TRAF) is a ground-breaking new comedy, and the first animated series built around, and starring, famous NFTs. It is also the first show of its kind where episodes are sold as individual NFTs.',
-      imgSrc: '/assets/ape-logo.svg',
-      websiteUrl: 'https://example.com'
-    },
-    // Add more projects as needed...
-  ];
-
-  openUrl(url: string) {
-    window.open(url, '_blank');
-  }
   constructor(private scrollService : ScrollService ) {}
 
   isScrollbarHidden: boolean = true;
