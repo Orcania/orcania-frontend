@@ -8,7 +8,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 })
 export class MainTopComponent {
   private scrollContainer: any;
-  link : string = 'portfolio';
+  link : string = 'about';
 
   constructor(private scrollService: ScrollService) {}
 
@@ -21,9 +21,9 @@ export class MainTopComponent {
   }
 
   scrollTo(elementId: string): void {
-    if (elementId === 'portfolio') {
-      this.link = 'portfolio';
-      this.scrollService.scrollPortfolio();
+    if (elementId === 'about') {
+      this.link = 'about';
+      this.scrollService.scrollAbout();
     }
   }
 }
