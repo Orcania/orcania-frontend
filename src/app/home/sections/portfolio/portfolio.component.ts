@@ -18,7 +18,7 @@ export class PortfolioComponent implements AfterViewInit {
         return `
           <p> <br>
           The top performing GameFi project on the XRPL Chain.  <br>
-           OWN.ERN. CONQUER.
+           OWN. ERAN. CONQUER.
           <br>
           <br>
           <br>
@@ -37,7 +37,9 @@ export class PortfolioComponent implements AfterViewInit {
           <p> <br>
           Powerful NFT ticketing platform that is blockchain<br> based,
           scalping proof and end-to-end. Experience<br> Web3 ticketing 
-          <br>with Ticmint.</p>
+         with Ticmint.
+         <br>
+         <br></p>
           `;
       },
       imgSrc: '/assets/services/ticmint.svg',
@@ -100,10 +102,13 @@ export class PortfolioComponent implements AfterViewInit {
       bgImgUrl: '/assets/bg-images/red-ape.png',
       description: () => {
         return `
-          <p>The Red Ape Family (TRAF) is a ground-breaking new <br> comedy,
+          <p>
+          <br>The Red Ape Family (TRAF) is a ground-breaking new <br> comedy,
            and the first animated series built around, and<br> starring, famous
-            NFTs. It is also the first show of its<br> kind where episodes are sold<br>
-             as individual NFTs.</p>
+            NFTs. It is also the first show of its<br> kind where episodes are sold
+             as individual NFTs
+             
+             <br></p>
           `;
       },
       imgSrc: '/assets/ape-logo.svg',
@@ -114,7 +119,7 @@ export class PortfolioComponent implements AfterViewInit {
   openUrl(url: string) {
     window.open(url, '_blank');
   }
-  constructor(private scrollService: ScrollService, private renderer: Renderer2) { }
+  constructor(private scrollService: ScrollService, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
     // ...
@@ -122,7 +127,6 @@ export class PortfolioComponent implements AfterViewInit {
     this.renderer.listen(this.ds._contentRef.nativeElement, 'scroll', (event) => {
       const panelWidth = this.containerRef.nativeElement.offsetWidth;
       const scrollLeft = event.target.scrollLeft;
-      console.log(scrollLeft)
       const panelNumber = Math.min(Math.round(scrollLeft / panelWidth) + 1, this.projects.length);
 
       // Update the currentPanel variable
@@ -156,10 +160,12 @@ export class PortfolioComponent implements AfterViewInit {
   //   // Update the currentPanel variable
   //   this.i = panelNumber;
 
+
+  
   //   // Update the navigation status */
   // }
 
-
+  
   moveLeft() {
     this.ds.moveLeft();
     if (this.i > 1) {
