@@ -122,7 +122,7 @@ export class PortfolioComponent implements AfterViewInit {
     this.renderer.listen(this.ds._contentRef.nativeElement, 'scroll', (event) => {
       const panelWidth = this.containerRef.nativeElement.offsetWidth;
       const scrollLeft = event.target.scrollLeft;
-      const panelNumber = Math.round(scrollLeft / panelWidth) + 1;
+      const panelNumber = Math.min(Math.round(scrollLeft / panelWidth) + 1, this.projects.length);
 
       // Update the currentPanel variable
       this.i = panelNumber;
