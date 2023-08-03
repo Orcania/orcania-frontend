@@ -124,7 +124,7 @@ export class PortfolioComponent implements AfterViewInit {
       const scrollLeft = event.target.scrollLeft;
       console.log(scrollLeft)
       const panelNumber = Math.round(scrollLeft / panelWidth) + 1;
-      const panelNumber = Math.min(Math.round(scrollLeft / panelWidth) + 1, this.projects.length);
+      // const panelNumber = Math.min(Math.round(scrollLeft / panelWidth) + 1, this.projects.length);
 
       // Update the currentPanel variable
       this.i = panelNumber;
