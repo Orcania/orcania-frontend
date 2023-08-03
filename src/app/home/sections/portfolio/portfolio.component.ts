@@ -114,7 +114,7 @@ export class PortfolioComponent implements AfterViewInit {
   openUrl(url: string) {
     window.open(url, '_blank');
   }
-  constructor(private scrollService: ScrollService, private renderer: Renderer2) {}
+  constructor(private scrollService: ScrollService, private renderer: Renderer2) { }
 
   ngAfterViewInit() {
     // ...
@@ -124,6 +124,7 @@ export class PortfolioComponent implements AfterViewInit {
       const scrollLeft = event.target.scrollLeft;
       console.log(scrollLeft)
       const panelNumber = Math.round(scrollLeft / panelWidth) + 1;
+      const panelNumber = Math.min(Math.round(scrollLeft / panelWidth) + 1, this.projects.length);
 
       // Update the currentPanel variable
       this.i = panelNumber;
@@ -159,7 +160,7 @@ export class PortfolioComponent implements AfterViewInit {
   //   // Update the navigation status */
   // }
 
-  
+
   moveLeft() {
     this.ds.moveLeft();
     if (this.i > 1) {
