@@ -1,13 +1,14 @@
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener, AfterViewInit } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { ScrollService } from 'src/app/services/scroll.service';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements AfterViewInit {
   projects = [
     {
       title: 'Crypto Land',
@@ -113,7 +114,20 @@ export class PortfolioComponent {
   openUrl(url: string) {
     window.open(url, '_blank');
   }
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, private renderer: Renderer2) {}
+
+  ngAfterViewInit() {
+    // ...
+
+    this.renderer.listen(this.ds._contentRef.nativeElement, 'scroll', (event) => {
+      const panelWidth = this.containerRef.nativeElement.offsetWidth;
+      const scrollLeft = event.target.scrollLeft;
+      const panelNumber = Math.round(scrollLeft / panelWidth) + 1;
+
+      // Update the currentPanel variable
+      this.i = panelNumber;
+    });
+  }
 
   isScrollbarHidden: boolean = true;
   private scrollContainer: any;
@@ -125,25 +139,26 @@ export class PortfolioComponent {
     | undefined;
   @ViewChild('portfolioContainer') containerRef!: ElementRef;
 
-  @HostListener('window:resize')
-  ngAfterViewInit() {
-    if (this.framePortfolio)
-      this.scrollContainer = this.framePortfolio.nativeElement;
-    this.scrollService.scrollHeightPortfolio =
-      this.scrollContainer.scrollHeight;
+  // @HostListener('window:resize')
+  // ngAfterViewInit() {
+  //   if (this.framePortfolio)
+  //     this.scrollContainer = this.framePortfolio.nativeElement;
+  //   this.scrollService.scrollHeightPortfolio =
+  //     this.scrollContainer.scrollHeight;
 
-    /* const panelWidth = this.containerRef.nativeElement.offsetWidth;
-    console.log(panelWidth)
-    const scrollLeft = this.containerRef.nativeElement.scrollLeft;
-    console.log(scrollLeft)
-    const panelNumber = Math.round(scrollLeft / panelWidth);
+  //   /* const panelWidth = this.containerRef.nativeElement.offsetWidth;
+  //   console.log(panelWidth)
+  //   const scrollLeft = this.containerRef.nativeElement.scrollLeft;
+  //   console.log(scrollLeft)
+  //   const panelNumber = Math.round(scrollLeft / panelWidth);
 
-    // Update the currentPanel variable
-    this.i = panelNumber;
+  //   // Update the currentPanel variable
+  //   this.i = panelNumber;
 
-    // Update the navigation status */
-  }
+  //   // Update the navigation status */
+  // }
 
+  
   moveLeft() {
     this.ds.moveLeft();
     if (this.i > 1) {
