@@ -8,7 +8,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 })
 export class MainTopComponent {
   private scrollContainer: any;
-  link : string = 'about';
+  link : string = 'services';
 
   constructor(private scrollService: ScrollService) {}
 
@@ -26,10 +26,15 @@ export class MainTopComponent {
       const element = document.getElementById(elementId);
 
       if (element) {
-        const yOffset = -170; // Adjust this value to suit your needs, negative values mean a bit to the top
+        const yOffset = -170;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         window.scrollTo({top: y, behavior: 'smooth'});
+      }
+
+      if (elementId === 'services'){
+        this.link = 'services';
+        this.scrollService.scrollServices()
       }
   }
 }
