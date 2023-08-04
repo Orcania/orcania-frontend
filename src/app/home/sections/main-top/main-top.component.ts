@@ -20,10 +20,13 @@ export class MainTopComponent {
     this.scrollService.scrollHeightHome = this.scrollContainer.scrollHeight;
   }
 
-  scrollTo(elementId: string): void {
-    if (elementId === 'about') {
-      this.link = 'about';
-      this.scrollService.scrollAbout();
-    }
+
+
+    scrollTo(elementId: string): void {
+      const element = document.getElementById(elementId);
+
+      if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+      }
   }
 }
