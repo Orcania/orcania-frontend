@@ -19,4 +19,5 @@ export class ContactComponent {
     this.scrollContainer = this.frameContact.nativeElement;
     this.scrollService.scrollHeightContact = this.scrollContainer.scrollHeight
   }
+  
 }

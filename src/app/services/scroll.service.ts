@@ -30,7 +30,7 @@ export class ScrollService {
 
   public scrollContact(): void {
     scroll({
-      top: this.scrollHeightAbout + this.scrollHeightHome + this.scrollHeightPortfolio - 150,
+      top: this.scrollHeightHome + this.scrollHeightAbout + 750,
       left: 0,
       behavior: 'smooth'
     });
