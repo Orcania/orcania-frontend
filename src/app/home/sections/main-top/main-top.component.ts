@@ -26,7 +26,10 @@ export class MainTopComponent {
       const element = document.getElementById(elementId);
 
       if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+        const yOffset = -170; // Adjust this value to suit your needs, negative values mean a bit to the top
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
       }
   }
 }
