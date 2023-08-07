@@ -12,11 +12,14 @@ export class ContactComponent {
   constructor (private scrollService: ScrollService) { }
 
   @ViewChild('frameContact', {static: false}) frameContact: ElementRef | undefined;
+  @ViewChild('frameContactContainer') containerRef!: ElementRef;
   
   @HostListener('window:resize')
   ngAfterViewInit() {
     if (this.frameContact)
     this.scrollContainer = this.frameContact.nativeElement;
     this.scrollService.scrollHeightContact = this.scrollContainer.scrollHeight
+    
   }
+  
 }

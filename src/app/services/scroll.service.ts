@@ -11,6 +11,7 @@ export class ScrollService {
   scrollHeightPortfolio: any;
   scrollHeightContact: any;
   scrollHeightAbout: any;
+  scrollHeightService: any;
 
   public scrollHome(): void {
     scroll({
@@ -30,7 +31,7 @@ export class ScrollService {
 
   public scrollContact(): void {
     scroll({
-      top: this.scrollHeightAbout + this.scrollHeightHome + this.scrollHeightPortfolio - 150,
+      top:  this.scrollHeightHome + this.scrollHeightAbout + this.scrollHeightPortfolio ,
       left: 0,
       behavior: 'smooth'
     });
@@ -39,6 +40,14 @@ export class ScrollService {
   public scrollAbout(): void {
     scroll({
       top: this.scrollHeightHome,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  public scrollServices(): void {
+    scroll({
+      top: this.scrollHeightHome + this.scrollHeightService,
       left: 0,
       behavior: 'smooth'
     });

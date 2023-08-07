@@ -120,7 +120,8 @@ export class PortfolioComponent implements AfterViewInit {
     window.open(url, '_blank');
   }
   constructor(private scrollService: ScrollService, private renderer: Renderer2) {}
-
+  
+  @HostListener('window:resize')
   ngAfterViewInit() {
     // ...
 
@@ -132,6 +133,12 @@ export class PortfolioComponent implements AfterViewInit {
       // Update the currentPanel variable
       this.i = panelNumber;
     });
+
+    if (this.framePortfolio)
+    this.scrollContainer = this.framePortfolio.nativeElement;
+    this.scrollService.scrollHeightPortfolio =
+    this.scrollContainer.scrollHeight;
+
   }
 
   isScrollbarHidden: boolean = true;
@@ -144,12 +151,8 @@ export class PortfolioComponent implements AfterViewInit {
     | undefined;
   @ViewChild('portfolioContainer') containerRef!: ElementRef;
 
-  // @HostListener('window:resize')
-  // ngAfterViewInit() {
-  //   if (this.framePortfolio)
-  //     this.scrollContainer = this.framePortfolio.nativeElement;
-  //   this.scrollService.scrollHeightPortfolio =
-  //     this.scrollContainer.scrollHeight;
+
+
 
   //   /* const panelWidth = this.containerRef.nativeElement.offsetWidth;
   //   console.log(panelWidth)
