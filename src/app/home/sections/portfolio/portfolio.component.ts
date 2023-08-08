@@ -191,4 +191,4 @@ export class PortfolioComponent implements AfterViewInit {
         else if (windowWidth < 768){
           this.isScrollbarHidden = false;
         }*/
-}
+} 
