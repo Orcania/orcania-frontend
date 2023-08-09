@@ -18,7 +18,7 @@ export class PortfolioComponent implements AfterViewInit {
         return `
           <p> <br>
           The top performing GameFi project on the XRPL Chain.  <br>
-           OWN. ERAN. CONQUER.
+           OWN. EARN. CONQUER.
           <br>
           <br>
           <br>
