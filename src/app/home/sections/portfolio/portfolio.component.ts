@@ -137,7 +137,7 @@ export class PortfolioComponent implements AfterViewInit {
           `;
       },
       imgSrc: '/assets/services/DEX.svg',
-      websiteUrl: 'https://theredapefamily.com/',
+      websiteUrl: 'https://dex.orcania.io/',
     },
   ];
 
